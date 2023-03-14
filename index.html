@@ -70,9 +70,6 @@
                         <h4>Yikes, errors...</h4>
                         <p id="errorVoornaam"></p>
                         <p id="errorNaam"></p>
-                        <p id="errorGebruikersnaam"></p>
-                        <p id="errorEmailadres"></p>
-                        <p id="errorAdres"></p>
                     </div>
                     <div class="alert alert-success">
                         <h4>Goed gedaan!</h4>
@@ -104,7 +101,9 @@
         const visaCard = document.getElementById("visaCard");
         const paypal = document.getElementById("paypal");
         const button = document.getElementById("button");
+
         const errorFirstname = document.getElementById("errorVoornaam");
+        const errorName = document.getElementById("errorNaam");
 
         button.addEventListener("click", validateForm);
 
@@ -115,6 +114,12 @@
                 errorFirstname.innerHTML = errors[0];
             } else {
                 errorFirstname.innerHTML = "";
+            };
+            if (name.value.trim() === "") {
+                errors.push("Het veld naam is vereist!");
+                errorName.innerHTML = errors[1];
+            } else {
+                errorName.innerHTML = "";
             };
         };
     </script>
