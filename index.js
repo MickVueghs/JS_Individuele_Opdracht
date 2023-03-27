@@ -133,7 +133,7 @@ function validateEmail(emailadres) {
 
 function validatePassword() {
     //https://www.w3resource.com/javascript/form/password-validation.php
-    var password=  /^[A-Za-z]\w{7,14}$/;
+    var password=  /^[A-Za-z]\w{6,14}$/;
 
     if (wachtwoord.value.match(password)) { 
         return true;
@@ -155,7 +155,7 @@ function validatePassword2() {
 
 function validateUsername() {
     //https://www.w3resource.com/javascript/form/password-validation.php
-    var username =  /^[A-Za-z]\w{1,14}$/;
+    var username =  /^[A-Za-z]\w{0,14}$/;
 
     if (gebruikersnaam.value.match(username)) { 
         return true;
